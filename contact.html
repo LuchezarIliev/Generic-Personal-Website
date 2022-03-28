@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lachezar Iliev</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <ul class="nav nav-pills categories">
+        <li><a href="./index.html">Начало</a></li>
+        <li><a href="./biography.html">Биография</a></li>
+        <li><a href="./about.html">За мен...</a></li>
+        <li><a href="./hobbies.html">Хобита</a></li>
+        <li class="active"><a href="#">Контакт</a></li>
+    </ul>
+    <div class="container post">
+        <div class="row">
+            <div class="col-md-6 post-title">
+                <h1>Контакт</h1>
+                <p class="author">
+                    <strong>Лъчезар Илиев</strong>
+                    <span class="text-muted">10-ти Януари 2022</span>
+                </p>
+                <hr>
+            </div>
+            <div class="col-md-6 col-md-offset-0 post-body">
+                <p>Моля, използвайте предоставената форма за контакт, в случай че желаете да се свържете с мен. Полетата, означени със звездичка (*), са задължителни! :)</p>
+            </div>
+            <div class="col-md-12 col-md-offset-0 post-body">
+                <table class="tg center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="contact">Име:*</span>
+                            </td>
+                            <td>
+                                <input class="input" type="text" class="form-control" id="contact-name" name="name" placeholder="Въведете своето име..." onkeyup='validateName()'>
+                            </td>
+                            <td>
+                                <span class='error-message' id='name-error'></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="contact">Телефон:</span>
+                            </td>
+                            <td>
+                                <input class="input" type="tel" class="form-control" id="contact-phone" name="phone" placeholder="Например: 1231231234" onkeyup='validatePhone()'>
+                            </td>
+                            <td>
+                                <span class='error-message' id='phone-error'></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="contact">Email:*</span>
+                            </td>
+                            <td>
+                                <input class="input" type="email" class="form-control" id="contact-email" name="email" placeholder="Въведете Email" onkeyup='validateEmail()'>
+                            </td>
+                            <td>
+                                <span class='error-message' id='email-error'></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="contact">Съобщение:*</span>
+                            </td>
+                            <td>
+                                <textarea class="input" rows="5" id='contact-message'  name='message' placeholder="Въведете своето съобщение..." onkeyup='validateMessage()'></textarea>
+                            </td>
+                            <td>
+                                <span class='error-message' id='message-error'></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="grey"></td>
+                            <td class="grey">
+                                <button class="btn" onclick='return validateForm()' class="btn btn-default">Изпрати</button>
+                            </td>
+                            <td class="grey"><span class='error-message' id='submit-error'></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h5>Лъчезар Илиев © Технически Университет София 2022</h5>
+    </footer>
+</body>
+</html>
